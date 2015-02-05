@@ -20,6 +20,7 @@ Default output is `<img />` tags wrapped in `<a>`s.
 ### Template function
 
 ```php
+<?php
 function my_bootstrap_instagram_output($pics) {
 	if (count($pics) > 0) { ?>
 		<div id="instagram-box" class="row">
@@ -33,6 +34,7 @@ function my_bootstrap_instagram_output($pics) {
 		</div>
 	<?php }
 }
+?>
 ```
 
 ## Notes
