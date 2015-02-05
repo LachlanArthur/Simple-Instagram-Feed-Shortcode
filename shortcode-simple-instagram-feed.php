@@ -54,9 +54,11 @@ function la_simple_instagram_feed($atts) {
 }
 
 function la_simple_instagram_feed_template($pics) {
+	ob_start();
 	foreach ($pics as $pic) { ?>
 		<a href="<?php echo esc_url($pic->link) ?>" title="<?php echo esc_attr($pic->caption->text) ?>">
 			<img src="<?php echo esc_url($pic->images->thumbnail->url) ?>" />
 		</a>
 	<?php }
+	return ob_get_clean();
 }

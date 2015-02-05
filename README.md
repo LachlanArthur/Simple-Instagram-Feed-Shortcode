@@ -22,6 +22,7 @@ Default output is `<img />` tags wrapped in `<a>`s.
 ```php
 <?php
 function my_bootstrap_instagram_output($pics) {
+	ob_start();
 	if (count($pics) > 0) { ?>
 		<div id="instagram-box" class="row">
 			<?php foreach ($pics as $pic) { ?>
@@ -33,6 +34,7 @@ function my_bootstrap_instagram_output($pics) {
 			<?php } ?>
 		</div>
 	<?php }
+	return ob_get_clean();
 }
 ?>
 ```
