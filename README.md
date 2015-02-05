@@ -19,19 +19,21 @@ Default output is `<img />` tags wrapped in `<a>`s.
 
 ### Template function
 
-	function my_bootstrap_instagram_output($pics) {
-		if (count($pics) > 0) { ?>
-			<div id="instagram-box" class="row">
-				<?php foreach ($pics as $pic) { ?>
-					<div class="col-xs-6 col-sm-4 col-md-3 col-lg-2">
-						<a href="<?php echo esc_url($pic->link) ?>" title="<?php echo esc_attr($pic->caption->text) ?>">
-							<img src="<?php echo esc_url($pic->images->thumbnail->url) ?>" class="img-responsive" />
-						</a>
-					</div>
-				<?php } ?>
-			</div>
-		<?php }
-	}
+```php
+function my_bootstrap_instagram_output($pics) {
+	if (count($pics) > 0) { ?>
+		<div id="instagram-box" class="row">
+			<?php foreach ($pics as $pic) { ?>
+				<div class="col-xs-6 col-sm-4 col-md-3 col-lg-2">
+					<a href="<?php echo esc_url($pic->link) ?>" title="<?php echo esc_attr($pic->caption->text) ?>">
+						<img src="<?php echo esc_url($pic->images->thumbnail->url) ?>" class="img-responsive" />
+					</a>
+				</div>
+			<?php } ?>
+		</div>
+	<?php }
+}
+```
 
 ## Notes
 
