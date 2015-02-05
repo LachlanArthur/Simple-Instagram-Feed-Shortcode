@@ -1,7 +1,7 @@
 <?php
 
 function la_simple_instagram_feed_init() {
-	add_shortcode('instagram-simple-feed', 'la_simple_instagram_feed');
+	add_shortcode('simple-instagram-feed', 'la_simple_instagram_feed');
 }
 add_action('init', 'la_simple_instagram_feed_init');
 
